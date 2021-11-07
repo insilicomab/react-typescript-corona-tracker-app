@@ -5,20 +5,18 @@ import { useCountryCoronaData } from "./hooks/useCountryCoronaData";
 import countriesJson from "./countries.json";
 import { TopPage } from "../src/pages/TopPage";
 import { WorldPage } from "./pages/WorldPage";
-import { CountryDataType } from "./type/countryData";
+import { CardType } from "./type/card";
 import "./App.css";
 
 export default function App() {
   const { setCountry, getCountryData, countryData, loading } =
     useCountryCoronaData();
 
-  const [allCountriesData, setAllCountriesData] = useState<CountryDataType>([
-    {
-      Country: "",
-      NewConfirmed: 0,
-      TotalConfirmed: 0,
-    },
-  ]);
+  const [allCountriesData, setAllCountriesData] = useState<CardType>({
+    Country: "",
+    NewConfirmed: 0,
+    TotalConfirmed: 0,
+  });
 
   useEffect(() => {
     fetch("https://reactbook-corona-tracker-api.herokuapp.com/summary")

@@ -5,7 +5,7 @@ import { Title } from "../components/Title";
 import { Selector } from "../components/Selector";
 import { Results } from "../components/Results";
 import { CountryDataType } from "../type/countryData";
-import { CountriesJsonType } from "../types/coutryJson";
+import { CountriesJsonType } from "../type/countryJson";
 
 type Props = {
   countriesJson: CountriesJsonType;

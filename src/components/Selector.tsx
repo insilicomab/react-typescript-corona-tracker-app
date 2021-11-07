@@ -1,4 +1,13 @@
-export const Selector = (props) => {
+import { FC } from "react";
+import { CountriesJsonType } from "../type/countryJson";
+
+type Props = {
+  setCountry: React.Dispatch<React.SetStateAction<string>>;
+  countriesJson: CountriesJsonType;
+  getCountryData: () => void;
+};
+
+export const Selector: FC<Props> = (props) => {
   const { setCountry, countriesJson, getCountryData } = props;
 
   return (

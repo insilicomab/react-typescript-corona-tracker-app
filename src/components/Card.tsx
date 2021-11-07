@@ -1,6 +1,7 @@
-import { CountryDataType } from "../type/countryDataType";
+import { FC } from "react";
+import { CardType } from "../type/card";
 
-export const Card = ({ allCountriesData }: CountryDataType) => {
+export const Card: FC<CardType> = (allCountriesData) => {
   return (
     <div className="card-container">
       {allCountriesData.map((singleData, index) => (
