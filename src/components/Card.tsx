@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { CardType } from "../type/card";
 
-export const Card: FC<CardType> = (allCountriesData) => {
+export const Card: FC<CardType> = ({ allCountriesData }) => {
   return (
     <div className="card-container">
       {allCountriesData.map((singleData, index) => (
@@ -17,7 +17,6 @@ export const Card: FC<CardType> = (allCountriesData) => {
               <span>{singleData.TotalConfirmed.toLocaleString()}</span>
             </p>
           </div>
-          　
         </div>
       ))}
     </div>

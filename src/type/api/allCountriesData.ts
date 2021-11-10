@@ -2,7 +2,7 @@ export interface AllCountriesDataType {
   ID: string;
   Message: string;
   Global: Global;
-  Countries?: CountriesEntity[] | null;
+  Countries: Array<CountriesEntity>;
   Date: string;
 }
 export interface Global {
