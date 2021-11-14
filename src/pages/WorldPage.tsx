@@ -1,10 +1,10 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import { Header } from "../components/Header";
 import { Title } from "../components/Title";
 import { Card } from "../components/Card";
 import { CardType } from "../type/card";
 
-export const WorldPage: FC<CardType> = ({ allCountriesData }) => {
+export const WorldPage: FC<CardType> = memo(({ allCountriesData }) => {
   return (
     <div className="world-page-container">
       <Header />
@@ -12,4 +12,4 @@ export const WorldPage: FC<CardType> = ({ allCountriesData }) => {
       <Card allCountriesData={allCountriesData} />
     </div>
   );
-};
+});

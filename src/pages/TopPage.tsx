@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 
 import { Header } from "../components/Header";
 import { Title } from "../components/Title";
@@ -15,7 +15,7 @@ type Props = {
   loading: boolean;
 };
 
-export const TopPage: FC<Props> = (props) => {
+export const TopPage: FC<Props> = memo((props) => {
   const { countriesJson, setCountry, getCountryData, countryData, loading } =
     props;
 
@@ -33,4 +33,4 @@ export const TopPage: FC<Props> = (props) => {
       </div>
     </div>
   );
-};
+});

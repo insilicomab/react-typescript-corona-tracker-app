@@ -1,7 +1,7 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import { CardType } from "../type/card";
 
-export const Card: FC<CardType> = ({ allCountriesData }) => {
+export const Card: FC<CardType> = memo(({ allCountriesData }) => {
   return (
     <div className="card-container">
       {allCountriesData.map((singleData, index) => (
@@ -21,4 +21,4 @@ export const Card: FC<CardType> = ({ allCountriesData }) => {
       ))}
     </div>
   );
-};
+});

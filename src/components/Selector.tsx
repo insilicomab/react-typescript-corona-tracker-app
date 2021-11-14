@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import { CountriesJsonType } from "../type/countryJson";
 
 type Props = {
@@ -7,7 +7,7 @@ type Props = {
   getCountryData: () => void;
 };
 
-export const Selector: FC<Props> = (props) => {
+export const Selector: FC<Props> = memo((props) => {
   const { setCountry, countriesJson, getCountryData } = props;
 
   return (
@@ -23,4 +23,4 @@ export const Selector: FC<Props> = (props) => {
       <button onClick={getCountryData}>Get Data</button>
     </div>
   );
-};
+});

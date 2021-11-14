@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import { Loading } from "../components/Loading";
 import { CountryDataType } from "../type/countryData";
 
@@ -7,7 +7,7 @@ type Props = {
   countryData: CountryDataType;
 };
 
-export const Results: FC<Props> = (props) => {
+export const Results: FC<Props> = memo((props) => {
   const { loading, countryData } = props;
 
   return (
@@ -37,4 +37,4 @@ export const Results: FC<Props> = (props) => {
       )}
     </div>
   );
-};
+});
